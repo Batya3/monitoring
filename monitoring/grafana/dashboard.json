@@ -1,0 +1,23 @@
+{
+  "dashboard": {
+    "id": null,
+    "uid": "flask-app-dashboard",
+    "title": "Flask App Metrics",
+    "tags": ["flask", "metrics"],
+    "timezone": "browser",
+    "panels": [
+      {
+        "type": "graph",
+        "title": "CPU Usage",
+        "targets": [
+          {
+            "expr": "avg(rate(process_cpu_seconds_total[5m])) by (job)",
+            "legendFormat": "{{job}}",
+            "refId": "A"
+          }
+        ],
+        "gridPos": { "x": 0, "y": 0, "w": 12, "h": 8 }
+      }
+    ]
+  }
+}

@@ -24,6 +24,12 @@ services:
       - GF_SECURITY_ADMIN_PASSWORD=admin
     ports:
       - "3000:3000"
+<<<<<<< HEAD
+=======
+    volumes:
+      - ./monitoring/grafana/grafana.ini:/etc/grafana/grafana.ini
+      - ./monitoring/grafana/dashboard.json:/etc/grafana/provisioning/dashboards/dashboard.json
+>>>>>>> 679e27a (learn test monitoring fix grafana)
     networks:
       - monitoring
     depends_on:
